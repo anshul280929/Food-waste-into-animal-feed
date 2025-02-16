@@ -1,0 +1,90 @@
+/* Background and container styles */
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f4f1ea; /* Light brown background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #8b5e3b; /* Brown border */
+  }
+  
+  /* Header */
+  .contact-header h1 {
+    color: #4a7c59; /* Dark green */
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Section title */
+  .contact-form-section h2 {
+    font-size: 24px;
+    color: #4a7c59;
+  }
+  
+  .contact-form-section p {
+    color: #6d4c41; /* Brown shade */
+    margin-bottom: 20px;
+  }
+  
+  /* Form styles */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    color: #4a7c59;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #8b5e3b; /* Brown border */
+    border-radius: 5px;
+    background: #fdf7f1; /* Light beige */
+  }
+  
+  /* Buttons */
+  .submit-button {
+    background: #4a7c59; /* Dark green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-button:hover {
+    background: #3a5c40; /* Darker green */
+  }
+  
+  .back-button-container {
+    margin-top: 20px;
+  }
+  
+  .back-button {
+    background: #8b5e3b; /* Brown */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .back-button:hover {
+    background: #6d4c41; /* Darker brown */
+  }
+  

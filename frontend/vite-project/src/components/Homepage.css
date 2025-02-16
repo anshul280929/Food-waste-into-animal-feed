@@ -1,0 +1,162 @@
+/* Home Container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e8f5e9; /* Light green */
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  color: #4a7023; /* Dark green */
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #5a4237; /* Brownish tone */
+  margin-bottom: 20px;
+}
+
+/* Upload Section */
+.upload-section {
+  position: relative;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Upload Button */
+.upload-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #c54b3c; /* Barn red */
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid #a33d31;
+  box-shadow: 0 4px 8px rgba(197, 75, 60, 0.2);
+  user-select: none;
+}
+
+.upload-button:hover {
+  background-color: #b14235;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(197, 75, 60, 0.3);
+}
+
+.upload-button:active {
+  transform: translateY(0);
+}
+
+/* Image Preview */
+.image-preview {
+  margin-top: 15px;
+  padding: 10px;
+  background: #e3d5c4; /* Light brown */
+  border-radius: 10px;
+  border: 2px solid #b8a690;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  border-radius: 5px;
+  border: 2px solid #a9937d;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  border: 4px solid #e3d5c4;
+  border-top: 4px solid #5a7247; /* Green */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Farm Animals */
+.cow, .chicken {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cow {
+  width: 100px;
+  height: 100px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ffffff'/%3E%3Cpath d='M30 70c0 10 20 10 20 0' fill='none' stroke='%23000000' stroke-width='2'/%3E%3C/svg%3E");
+  bottom: -20px;
+  left: 10%;
+}
+
+.chicken {
+  width: 80px;
+  height: 80px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23FFD54F'/%3E%3Cpath d='M30 70c0 10 20 10 20 0' fill='none' stroke='%23000000' stroke-width='2'/%3E%3C/svg%3E");
+  bottom: -10px;
+  right: 10%;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .upload-button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .cow, .chicken {
+    display: none; /* Hide animals on smaller screens */
+  }
+}

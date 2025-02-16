@@ -1,0 +1,123 @@
+.nutrition-chart-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: var(--chart-bg, #ffffff);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .nutrition-chart-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--chart-title-color, #1a1a1a);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--chart-border-color, #eaeaea);
+  }
+  
+  .nutrition-chart-section {
+    position: relative;
+    height: 400px;
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    background-color: var(--chart-section-bg, #f8f9fa);
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .nutrition-chart-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .nutrition-chart-section:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Custom tooltip styles */
+  .nutrition-chart-tooltip {
+    background-color: var(--tooltip-bg, rgba(255, 255, 255, 0.95));
+    border: 1px solid var(--tooltip-border, #e2e8f0);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nutrition-chart-tooltip-label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--tooltip-label, #2d3748);
+  }
+  
+  .nutrition-chart-tooltip-value {
+    color: var(--tooltip-value, #4a5568);
+  }
+  
+  /* Legend styles */
+  .nutrition-chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: var(--legend-bg, rgba(255, 255, 255, 0.8));
+    border-radius: 0.5rem;
+  }
+  
+  .nutrition-chart-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--legend-text, #4a5568);
+  }
+  
+  /* Custom colors for chart elements */
+  :root {
+    --required-color: #8884d8;
+    --available-color: #82ca9d;
+    --grid-color: #e2e8f0;
+    --axis-color: #718096;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .nutrition-chart-container {
+      padding: 1rem;
+      margin: 1rem;
+    }
+  
+    .nutrition-chart-section {
+      height: 300px;
+      margin-bottom: 2rem;
+    }
+  
+    .nutrition-chart-title {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .nutrition-chart-legend {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .nutrition-chart-container {
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .nutrition-chart-section {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  }
