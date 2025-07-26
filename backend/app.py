@@ -21,8 +21,8 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # Initialize Hugging Face Inference Client
-client = InferenceClient(api_key="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")
-groq_client = Groq(api_key="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")
+client = InferenceClient(api_key="")
+groq_client = Groq(api_key="")
 # Global variable to store intermediate results
 stored_results = None
 email=None
