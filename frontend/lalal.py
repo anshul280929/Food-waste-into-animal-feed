@@ -4,7 +4,7 @@ import base64
 import io
 import requests
 # Initialize client
-client = InferenceClient(api_key="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")
+client = InferenceClient(api_key="")
 
 def optimize_image(image_path, max_size=512, quality=85):
     """Resize image and compress to reduce payload size"""
