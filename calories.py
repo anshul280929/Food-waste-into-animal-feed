@@ -1,6 +1,6 @@
 from groq import Groq
 
-groq_client = Groq(api_key="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")
+groq_client = Groq(api_key="")
 
 breed_name = "Jersey Cow"  # Change this to any breed you want
 
