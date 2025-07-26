@@ -1,7 +1,7 @@
 from huggingface_hub import InferenceClient
 import base64
 
-client = InferenceClient(api_key="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")
+client = InferenceClient(api_key="")
 
 def image_to_base64(image_path):
     with open(image_path, "rb") as image_file:
